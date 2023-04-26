@@ -1,18 +1,6 @@
 <link rel="stylesheet" href="users_pagination.css">
 <?php
-// Database connection code here
-// updated code
-// $limit = isset($_GET['limit']) ? intval($_GET['limit']) : $limit; // Number of records per page
-// $page = isset($_GET['page']) ? $_GET['page'] : 5;
-// $start = ($page - 1) * $limit;
 
-// $result = $conn->query("SELECT COUNT(*) FROM users");
-// $total_records = $result->fetch_array()[0];
-// $total_pages = ceil($total_records / $limit);
-
-// $result = $conn->query("SELECT * FROM users ORDER BY id LIMIT $start, $limit");
-
-// original code
 $limit = 5; // Number of records per page
 $page = isset($_GET['page']) ? $_GET['page'] : 1;
 $start = ($page - 1) * $limit;
@@ -59,5 +47,3 @@ for ($i = 1; $i <= $total_pages; $i++) {
 echo '</ul>';
 echo '</nav>';
 ?>
-
-

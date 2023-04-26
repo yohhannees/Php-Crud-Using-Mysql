@@ -1,81 +1,90 @@
 /* Global styles */
 body {
-    background-color: #f2f2f2;
-    font-family: Arial, sans-serif;
-    font-size: 16px;
-    color: #333;
+  background-color: #f2f2f2;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  color: #333;
 }
 
 h1 {
-    color: #ff6600;
-    font-size: 36px;
-    margin-top: 50px;
-    margin-bottom: 20px;
+  text-align: center;
+  color: #ff6600;
+  align-self: center;
+  justify-self: center;
+
+  font-size: 36px;
+  margin-top: 50px;
+  margin-bottom: 20px;
 }
 
 p {
-    line-height: 1.5;
-    margin-bottom: 10px;
+  line-height: 1.5;
+  margin-bottom: 10px;
 }
 
 /* Form styles */
 .form-container {
-    border: 1px solid #ccc;
-    padding: 20px;
-    width: 50%;
-    margin: 0 auto;
-    border-radius: 5px;
+  border: 1px solid #ccc;
+  padding: 20px;
+  width: 50%;
+  margin: 0 auto;
+  border-radius: 5px;
 }
 
 .form-group {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
 }
 
-input[type="text"], input[type="number"] {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    width: 100%;
-    box-sizing: border-box;
+input[type="text"],
+input[type="number"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 button[type="submit"] {
-    background-color: #ff6600;
-    color: #fff;
-    font-size: 16px;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+  background-color: #ff6600;
+  color: #fff;
+  font-size: 16px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 button[type="submit"]:hover {
-    background-color: #e65c00;
+  background-color: #e65c00;
 }
 
 /* Row count styles */
 .row-count {
-    margin-bottom: 20px;
-     width: 50%;
-        margin: 0 auto;
+  margin-bottom: 20px;
+  width: 50%;
+  margin: 0 auto;
 }
 
 .row-count p {
-    display: inline-block;
-    margin-right: 10px;
-    font-weight: bold;
+  display: inline-block;
+  margin-right: 10px;
+  font-weight: bold;
 }
 
 .row-count input[type="number"] {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    width: 50px;
-    box-sizing: border-box;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 50px;
+  box-sizing: border-box;
+}
+.text-center
+{
+ align-items: center;
 }
