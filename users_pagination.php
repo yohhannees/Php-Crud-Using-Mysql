@@ -51,8 +51,11 @@ echo '</nav>';
 <style>
     /* Style for the table */
     .table {
-        width: 100%;
+        width: 50%;
+        margin: 0 auto;
         border-collapse: collapse;
+
+        border-color: #000;
         border-radius: 4px;
         overflow: hidden;
     }
@@ -89,4 +92,6 @@ echo '</nav>';
         background-color: #007bff;
         border-color: #007bff;
     }
+
+   
 </style>
