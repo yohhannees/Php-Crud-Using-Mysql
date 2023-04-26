@@ -1,4 +1,12 @@
 <link rel="stylesheet" href="users_pagination.css">
+<div class="row-count">
+    <form method="get">
+        <label for="limit">Number of records per page:</label>
+        <input type="number" name="limit" id="row-count" id="limit" value="<?php echo $limit; ?>">
+        <button type="submit">Apply</button>
+    </form>
+</div>
+
 <?php
 
 $limit = 5; // Number of records per page
@@ -10,6 +18,7 @@ $total_records = $result->fetch_array()[0];
 $total_pages = ceil($total_records / $limit);
 
 $result = $conn->query("SELECT * FROM users LIMIT $start, $limit");
+
 
 echo '<table class="table table-bordered mt-4">';
 echo '<thead>';
