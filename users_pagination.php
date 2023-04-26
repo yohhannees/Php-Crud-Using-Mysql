@@ -9,7 +9,7 @@
 
 <?php
 
-$limit = 5; // Number of records per page
+$limit = 2; // Number of records per page
 $page = isset($_GET['page']) ? $_GET['page'] : 1;
 $start = ($page - 1) * $limit;
 
