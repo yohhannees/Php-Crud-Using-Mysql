@@ -4,9 +4,7 @@
 // $limit = 5; // Number of records per page
 // $limit = isset($_GET['limit']) ? $_GET['limit'] : 5; // Number of records per page
 $limit = isset($_GET['limit']) ? intval($_GET['limit']) : 5; // Number of records per page
-// $page = isset($_GET['page']) ? $_GET['page'] : 1;
-$page = isset($_GET['page']) ? intval($_GET['page']) : 1;
-var_dump($page); // Check the value of $page
+$page = isset($_GET['page']) ? $_GET['page'] : 1;
 $start = ($page - 1) * $limit;
 
 $result = $conn->query("SELECT COUNT(*) FROM users");
