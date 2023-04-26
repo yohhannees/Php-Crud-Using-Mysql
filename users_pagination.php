@@ -2,15 +2,19 @@
 // Database connection code here
 
 // $limit = 5; // Number of records per page
-$limit = isset($_GET['limit']) ? $_GET['limit'] : 5; // Number of records per page
-$page = isset($_GET['page']) ? $_GET['page'] : 1;
+// $limit = isset($_GET['limit']) ? $_GET['limit'] : 5; // Number of records per page
+$limit = isset($_GET['limit']) ? intval($_GET['limit']) : 5; // Number of records per page
+// $page = isset($_GET['page']) ? $_GET['page'] : 1;
+$page = isset($_GET['page']) ? intval($_GET['page']) : 1;
+var_dump($page); // Check the value of $page
 $start = ($page - 1) * $limit;
 
 $result = $conn->query("SELECT COUNT(*) FROM users");
 $total_records = $result->fetch_array()[0];
 $total_pages = ceil($total_records / $limit);
 
-$result = $conn->query("SELECT * FROM users LIMIT $start, $limit");
+// $result = $conn->query("SELECT * FROM users LIMIT $start, $limit");
+$result = $conn->query("SELECT * FROM users ORDER BY id LIMIT $start, $limit");
 
 echo '<table class="table table-bordered mt-4">';
 echo '<thead>';
