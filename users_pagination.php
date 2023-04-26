@@ -1,4 +1,6 @@
 <?php
+// Database connection code here
+
 $limit = 5; // Number of records per page
 $page = isset($_GET['page']) ? $_GET['page'] : 1;
 $start = ($page - 1) * $limit;
@@ -44,3 +46,47 @@ for ($i = 1; $i <= $total_pages; $i++) {
 }
 echo '</ul>';
 echo '</nav>';
+?>
+
+<style>
+    /* Style for the table */
+    .table {
+        width: 100%;
+        border-collapse: collapse;
+        border-radius: 4px;
+        overflow: hidden;
+    }
+
+    /* Style for the table header */
+    .table thead {
+        background-color: #f5f5f5;
+        color: #333;
+        font-weight: bold;
+    }
+
+    /* Style for table cells */
+    .table td,
+    .table th {
+        padding: 12px 15px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+    }
+
+    /* Style for table cell links */
+    .table td a {
+        color: #333;
+        text-decoration: none;
+    }
+
+    /* Style for table cell links on hover */
+    .table td a:hover {
+        color: #000;
+        text-decoration: underline;
+    }
+
+    /* Style for active pagination link */
+    .pagination .page-item.active .page-link {
+        background-color: #007bff;
+        border-color: #007bff;
+    }
+</style>
