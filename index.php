@@ -33,8 +33,11 @@
             </div>
         </div>
         <div class="row-count">
-            <p>Number of Rows:</p>
-            <input type="number" id="row-count" name="row-count" required>
+            <form method="get">
+                <label for="limit">Number of records per page:</label>
+                <input type="number" name="limit" id="row-count"  id="limit" value="<?php echo $limit; ?>">
+                <button type="submit">Apply</button>
+            </form>
         </div>
 
         <!-- Display Users and Pagination -->

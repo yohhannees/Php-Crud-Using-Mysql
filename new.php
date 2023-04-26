@@ -1,8 +1,7 @@
 <?php
 // Database connection code here
 
-// $limit = 5; // Number of records per page
-$limit = isset($_GET['limit']) ? $_GET['limit'] : 5; // Number of records per page
+$limit = 5; // Number of records per page
 $page = isset($_GET['page']) ? $_GET['page'] : 1;
 $start = ($page - 1) * $limit;
 
@@ -31,8 +30,8 @@ while ($row = $result->fetch_assoc()) {
     echo '<td>' . $row['last_name'] . '</td>';
     echo '<td>' . $row['age'] . '</td>';
     echo '<td>';
-    echo '<a href="edit_user.php?id=' . $row['id'] . '" class="btn btn-sm btn-edit">Edit</a> ';
-    echo '<a href="delete_user.php?id=' . $row['id'] . '" class="btn btn-sm btn-delete">Delete</a>';
+    echo '<a href="edit_user.php?id=' . $row['id'] . '" class="btn btn-sm btn-warning">Edit</a> ';
+    echo '<a href="delete_user.php?id=' . $row['id'] . '" class="btn btn-sm btn-danger">Delete</a>';
     echo '</td>';
     echo '</tr>';
 }
@@ -43,7 +42,7 @@ echo '</table>';
 echo '<nav aria-label="Page navigation example">';
 echo '<ul class="pagination justify-content-center">';
 for ($i = 1; $i <= $total_pages; $i++) {
-    echo '<li class="page-item' . ($page == $i ? ' active' : '') . '"><a class="page-link btn btn-outline-secondary" href="index.php?page=' . $i . '">' . $i . '</a></li>';
+    echo '<li class="page-item' . ($page == $i ? ' active' : '') . '"><a class="page-link" href="index.php?page=' . $i . '">' . $i . '</a></li>';
 }
 echo '</ul>';
 echo '</nav>';
@@ -52,10 +51,11 @@ echo '</nav>';
 <style>
     /* Style for the table */
     .table {
-        width: 60%;
+        width: 50%;
         margin: 0 auto;
-        border-collapse: separate;
-        border: 1px solid #000;
+        border-collapse: collapse;
+
+        border-color: #000;
         border-radius: 4px;
         overflow: hidden;
     }
@@ -72,8 +72,7 @@ echo '</nav>';
     .table th {
         padding: 12px 15px;
         text-align: left;
-
-        border: 1px solid #000;
+        border-bottom: 1px solid #ddd;
     }
 
     /* Style for table cell links */
@@ -92,30 +91,5 @@ echo '</nav>';
     .pagination .page-item.active .page-link {
         background-color: #007bff;
         border-color: #007bff;
-    }
-
-    .btn-edit {
-        color: #fff;
-        background-color: #28a745;
-        border-color: #28a745;
-    }
-
-    .btn-delete {
-        color: #fff;
-        background-color: #dc3545;
-        border-color: #dc3545;
-    }
-
-    /* Hover styles for edit and delete buttons */
-    .btn-edit:hover {
-        color: #fff;
-        background-color: #218838;
-        border-color: #1e7e34;
-    }
-
-    .btn-delete:hover {
-        color: #fff;
-        background-color: #c82333;
-        border-color: #bd2130;
     }
 </style>
