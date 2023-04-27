@@ -31,7 +31,21 @@
                     <button type="submit">Add User</button>
                 </form>
             </div>
+            <div class="update">
+                <form method="get">
+                    <label for="limit">Records per page:</label>
+                    <select name="limit" id="limit">
+                        <option value="3">3</option>
+                        <option value="5">5</option>
+                        <option value="10">10</option>
+                        <option value="25">25</option>
+                    </select>
+                    <input type="hidden" name="page" value="1">
+                    <button type="submit">Update</button>
+                </form>
+            </div>
         </div>
+
 
         <!-- Display Users and Pagination -->
         <?php

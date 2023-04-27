@@ -84,7 +84,27 @@ button[type="submit"]:hover {
   width: 50px;
   box-sizing: border-box;
 }
-.text-center
-{
- align-items: center;
+.text-center {
+  align-items: center;
+}
+.update {
+  margin-top: 10px;
+}
+
+/* edit page css */
+.container {
+  border: 1px solid #ccc;
+  padding: 20px;
+  width: 50%;
+  margin: 0 auto;
+  border-radius: 5px;
+}
+.cancel {
+     background-color:red;
+    color: #fff;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }

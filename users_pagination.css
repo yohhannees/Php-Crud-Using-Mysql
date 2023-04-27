@@ -1,70 +1,73 @@
+/* Style for the table */
+.table {
+  width: 60%;
+  margin: 0 auto;
+  border-collapse: separate;
+  border: 1px solid #000;
+  border-radius: 4px;
+  overflow: hidden;
+}
 
+/* Style for the table header */
+.table thead {
+  background-color: #f5f5f5;
+  color: #333;
+  font-weight: bold;
+}
 
-    /* Style for the table */
-    .table {
-        width: 60%;
-        margin: 0 auto;
-        border-collapse: separate;
-        border: 1px solid #000;
-        border-radius: 4px;
-        overflow: hidden;
-    }
+/* Style for table cells */
+.table td,
+.table th {
+  padding: 12px 15px;
+  text-align: left;
 
-    /* Style for the table header */
-    .table thead {
-        background-color: #f5f5f5;
-        color: #333;
-        font-weight: bold;
-    }
+  border: 1px solid #000;
+}
 
-    /* Style for table cells */
-    .table td,
-    .table th {
-        padding: 12px 15px;
-        text-align: left;
+/* Style for table cell links */
+.table td a {
+  color: #333;
+  text-decoration: none;
+}
 
-        border: 1px solid #000;
-    }
+/* Style for table cell links on hover */
+.table td a:hover {
+  color: #000;
+  text-decoration: underline;
+}
 
-    /* Style for table cell links */
-    .table td a {
-        color: #333;
-        text-decoration: none;
-    }
+/* Style for active pagination link */
+.pagination .page-item.active .page-link {
+  background-color: #007bff;
+  border-color: #007bff;
+}
 
-    /* Style for table cell links on hover */
-    .table td a:hover {
-        color: #000;
-        text-decoration: underline;
-    }
+.btn-edit {
+  color: #fff;
+  background-color: #28a745;
+  border-color: #28a745;
+}
 
-    /* Style for active pagination link */
-    .pagination .page-item.active .page-link {
-        background-color: #007bff;
-        border-color: #007bff;
-    }
+.btn-delete {
+  color: #fff;
+  background-color: #dc3545;
+  border-color: #dc3545;
+}
 
-    .btn-edit {
-        color: #fff;
-        background-color: #28a745;
-        border-color: #28a745;
-    }
+/* Hover styles for edit and delete buttons */
+.btn-edit:hover {
+  color: #fff;
+  background-color: #218838;
+  border-color: #1e7e34;
+}
 
-    .btn-delete {
-        color: #fff;
-        background-color: #dc3545;
-        border-color: #dc3545;
-    }
+.btn-delete:hover {
+  color: #fff;
+  background-color: #c82333;
+  border-color: #bd2130;
+}
 
-    /* Hover styles for edit and delete buttons */
-    .btn-edit:hover {
-        color: #fff;
-        background-color: #218838;
-        border-color: #1e7e34;
-    }
-
-    .btn-delete:hover {
-        color: #fff;
-        background-color: #c82333;
-        border-color: #bd2130;
-    }
+.pagination {
+  display: inline-block;
+  margin-right: 12px;
+}
