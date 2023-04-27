@@ -32,18 +32,11 @@
                 </form>
             </div>
         </div>
-        <!-- <div class="row-count">
-            <form method="get">
-                <label for="limit">Number of records per page:</label>
-                <input type="number" name="limit" id="row-count" id="limit" value="<?php echo $limit; ?>">
-                <button type="submit">Apply</button>
-            </form>
-        </div> -->
 
         <!-- Display Users and Pagination -->
         <?php
-        require_once 'db.php';
-        require_once 'users_pagination.php';
+        require 'db.php';
+        require 'users_pagination.php';
         ?>
 
     </div>

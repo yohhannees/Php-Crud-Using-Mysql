@@ -1,15 +1,18 @@
 <link rel="stylesheet" href="users_pagination.css">
-<div class="row-count">
-    <form method="get">
-        <label for="limit">Number of records per page:</label>
-        <input type="number" name="limit" id="row-count" id="limit" value="<?php echo $limit; ?>">
-        <button type="submit">Apply</button>
-    </form>
-</div>
-
+<form method="get" id="records-per-page-form">
+    <label for="limit">Records per page:</label>
+    <select name="limit" id="limit">
+        <option value="3">3</option>
+        <option value="5">5</option>
+        <option value="10">10</option>
+        <option value="25">25</option>
+    </select>
+    <input type="hidden" name="page" value="1">
+    <button type="submit">Update</button>
+</form>
 <?php
-
-$limit = 2; // Number of records per page
+$limit = isset($_GET['limit']) ? $_GET['limit'] : 3; // Use the selected value or default to 3 records per page
+// $limit = 3; // Number of records per page
 $page = isset($_GET['page']) ? $_GET['page'] : 1;
 $start = ($page - 1) * $limit;
 
@@ -50,8 +53,12 @@ echo '</table>';
 
 echo '<nav aria-label="Page navigation example">';
 echo '<ul class="pagination justify-content-center">';
+// for ($i = 1; $i <= $total_pages; $i++) {
+//     echo '<li class="page-item' . ($page == $i ? ' active' : '') . '"><a class="page-link btn btn-outline-secondary" href="index.php?page=' . $i . '">' . $i . '</a></li>';
+// }
+
 for ($i = 1; $i <= $total_pages; $i++) {
-    echo '<li class="page-item' . ($page == $i ? ' active' : '') . '"><a class="page-link btn btn-outline-secondary" href="index.php?page=' . $i . '">' . $i . '</a></li>';
+    echo '<li class="page-item' . ($page == $i ? ' active' : '') . '"><a class="page-link btn btn-outline-secondary" href="index.php?page=' . $i . '&limit=' . $limit . '">' . $i . '</a></li>';
 }
 echo '</ul>';
 echo '</nav>';
