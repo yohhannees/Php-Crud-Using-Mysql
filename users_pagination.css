@@ -71,3 +71,28 @@
   display: inline-block;
   margin-right: 12px;
 }
+
+.page-link {
+  display: inline-block;
+  padding: 8px 16px;
+  border: 1px solid #ccc;
+  margin-right: 10px;
+  text-decoration: none;
+  color: #000;
+}
+a {
+  display: inline-block;
+  padding: 8px 16px;
+  border: 1px solid #ccc;
+  margin-right: 10px;
+  text-decoration: none;
+  color: #000;
+}
+li {
+  display: inline-block;
+  padding: 8px 16px;
+  border: 1px solid #ccc;
+  margin-right: 10px;
+  text-decoration: none;
+  color: #000;
+}

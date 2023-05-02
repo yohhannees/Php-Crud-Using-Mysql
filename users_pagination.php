@@ -41,7 +41,7 @@ echo '</table>';
 echo '<nav aria-label="Page navigation example">';
 echo '<ul class="pagination justify-content-center">';
 for ($i = 1; $i <= $total_pages; $i++) {
-    echo '<li class="page-item' . ($page == $i ? ' active' : '') . '"><a class="page-link " href="index.php?page=' . $i . '&limit=' . $limit . '">' . $i . '</a></li>';
+    echo '<a class="page-link " href="index.php?page=' . $i . '&limit=' . $limit . '">' . $i . '</a>';
 }
 echo '</ul>';
 echo '</nav>';
